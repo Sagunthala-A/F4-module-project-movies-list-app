@@ -1,0 +1,25 @@
+.genreFilter{
+    background-color: var(--backgroundColor);
+    padding: 1rem;
+    border-radius:.5rem ;
+}
+
+.genreFilter__buttonList{
+    display: flex;
+    gap:1.1rem;
+    flex-wrap: wrap;
+    padding:.4rem;
+    /* margin-bottom:1rem; */
+}
+
+.genreFilter__buttonList button{
+    padding:10px;
+    border:none;
+    background-color:var(--buttonColor);
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.genreFilter__buttonList button:hover{
+    background-color:var(--buttonColorHover);
+}

@@ -1,0 +1,24 @@
+.moviesListTable,th,td{
+    border:1px solid var(--buttonColor);
+    border-collapse: collapse;
+    padding:.5rem 5rem .5rem 1rem;
+    text-align: left;
+}
+
+.moviesListTable thead {
+    background-color:var(--backgroundColor);
+}
+
+.moviesListTable tr:hover{
+    background-color:var(--backgroundColor);
+}
+
+.moviesWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moviesListTable{
+    margin-top: 1.5rem;
+}
