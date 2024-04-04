@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieList.css';
 
-const MovieList = ({movies}) => {
+const MovieList = ({movies,clickedGenre}) => {
   return (
     <div className='moviesWrapper'>
 
@@ -20,7 +20,13 @@ const MovieList = ({movies}) => {
         */}
         <tbody>
             {
-                movies.map((val,ind)=>(
+                clickedGenre ? movies.filter((movie)=>(movie.genre == clickedGenre)).map((val,ind)=>(
+                    <tr key={ind}>
+                        <td>{val.title}</td>
+                        <td>{val.genre}</td>
+                        <td>{val.year}</td>
+                    </tr>
+                )): movies.map((val,ind)=>(
                     <tr key={ind}>
                         <td>{val.title}</td>
                         <td>{val.genre}</td>
@@ -28,6 +34,16 @@ const MovieList = ({movies}) => {
                     </tr>
                 ))
             }
+
+            {/* {
+                movies.map((val,ind)=>(
+                    <tr key={ind}>
+                        <td>{val.title}</td>
+                        <td>{val.genre}</td>
+                        <td>{val.year}</td>
+                    </tr>
+                ))
+            } */}
         </tbody>
       </table>
       </div>

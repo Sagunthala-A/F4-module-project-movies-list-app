@@ -1,8 +1,11 @@
 import './App.css';
-import MovieList from './MovieList';
-import GenreFilter from './GenreFilter';
+import MovieList from './Components/MovieList/MovieList';
+import GenreFilter from './Components/GenreFilter/GenreFilter';
+import { useState } from 'react';
 
 function App() {
+
+  const [clickedGenre,setClickedGenre] = useState(null)
 
   const genres = [ 
     "Drama",
@@ -37,10 +40,16 @@ function App() {
   return (
     <div className="App">
       <h1>Top 15 Movies of All Time</h1>
-      <GenreFilter genres={genres}>
+      <GenreFilter 
+        genres={genres}
+        setClickedGenre = {setClickedGenre}
+      >
       </GenreFilter>
 
-      <MovieList movies={movies}>
+      <MovieList 
+        movies={movies}
+        clickedGenre = {clickedGenre}
+      >
       </MovieList>
     </div>
   );
